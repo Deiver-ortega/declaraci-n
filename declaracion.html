@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Pregunta especial!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg, #ffefba, #ffffff, #bae1ff, #ffb3ba);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            text-align: center;
+            margin-top: 50px; /* Espacio superior */
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 48px; /* Tamaño grande para el título */
+            color: #d61c3e; /* Color rojo romántico */
+            margin-bottom: 20px; /* Espacio inferior */
+        }
+
+        p {
+            font-size: 24px; /* Tamaño del texto */
+            color: #333; /* Color de texto oscuro */
+            margin-bottom: 30px; /* Espacio inferior */
+        }
+
+        input[type="radio"] {
+            margin-right: 10px; /* Espacio entre los botones de opción */
+        }
+
+        label {
+            font-size: 20px; /* Tamaño del texto de la opción */
+            color: #333; /* Color de texto oscuro */
+        }
+
+        input[type="submit"] {
+            background-color: #d61c3e; /* Color de fondo rojo */
+            color: #fff; /* Color del texto blanco */
+            font-size: 20px; /* Tamaño del texto del botón */
+            padding: 10px 20px; /* Relleno del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambio de cursor al pasar el ratón */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #b41732; /* Color de fondo más oscuro al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Quieres ser mi novia?</h1>
+    <p>¡Hola mi amor! He estado pensando mucho en ti y me preguntaba si te gustaría ser mi novia. Por favor, elige una opción:</p>
+    <form action="/enviar_respuesta" method="post">
+        <input type="radio" id="si" name="respuesta" value="si">
+        <label for="si">Sí, me encantaría.</label><br>
+        <input type="radio" id="no" name="respuesta" value="no">
+        <label for="no">No, gracias.</label><br><br>
+        <input type="submit" value="Enviar respuesta">
+    </form>
+</body>
+</html>
